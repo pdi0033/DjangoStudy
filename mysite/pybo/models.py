@@ -15,5 +15,3 @@ class Answer(models.Model):
     create_date = models.DateTimeField()
 
 
-
-
