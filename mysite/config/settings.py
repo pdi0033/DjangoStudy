@@ -29,9 +29,14 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
-
+# 폴더명.파일명.클래스명
+# blog.apps.BlogConfig
 INSTALLED_APPS = [
+    # 사용자가 만든 앱을 등록과정을 거쳐야 한다.
+    "blog.apps.BlogConfig",
+    "guestbook.apps.GuestbookConfig",
     "pybo.apps.PyboConfig",
+
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -44,7 +49,7 @@ MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
-    "django.middleware.csrf.CsrfViewMiddleware",
+    #"django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
@@ -52,10 +57,13 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = "config.urls"
 
+# html 파일을 들 위치 지정
+import os   # os라이브러리- 윈도우 os 제어 라이브러리
+# os.path.join  C:/django_workspace1 "/" + templates
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates'],
+        "DIRS": [ os.path.join(BASE_DIR, 'templates') ],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
