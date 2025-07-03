@@ -7,4 +7,5 @@ from . import views
 # config/urls.py    blog/~~~
 urlpatterns = [
     path("", views.index),     
+    path("list", views.getList), 
 ]
