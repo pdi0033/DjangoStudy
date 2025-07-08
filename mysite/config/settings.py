@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # 사용자가 만든 앱을 등록과정을 거쳐야 한다.
     "blog.apps.BlogConfig",
     "guestbook.apps.GuestbookConfig",
+    "score.apps.ScoreConfig",       # 등록을 해줘야 makemigrations이나 migrate가 작동된다.
     "pybo.apps.PyboConfig",
 
     "django.contrib.admin",

@@ -25,6 +25,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("pybo/", include('pybo.urls')),
     path("blog/", include("blog.urls")),
+    path("score/", include("score.urls")),
     path("guestbook/", include("guestbook.urls")),
     #path("blog/", views.index),     # url이 blog/인 경우 views.py 파일의 index함수 호출
     # path 함수가 url http://127.0.0.1:8000/blog

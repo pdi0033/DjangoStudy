@@ -8,7 +8,9 @@ from . import views
 app_name = "blog"       # 반드시 필요함.
 urlpatterns = [
     path("", views.index),     
-    path("list", views.getList, name="blog_list"), 
+    path("list2", views.getList2, name="blog_list2"),       # json 형태로 출력
+    path("list", views.getList, name="blog_list"),          # html
+    path("view/<id>", views.view, name="blog_view"),        # html에서 url 'blog:blog_view'
     path("write", views.write, name="blog_write"),        # html페이지로 이동
     path("save", views.save, name="blog_save"),          # 데이터를 받아서 디비에 저장
 ]
