@@ -12,4 +12,5 @@ urlpatterns = [
     path("view/<id>", views.view, name="score_view"),        # html에서 url 'score:score_view'
     path("write", views.write, name="score_write"),        # html페이지로 이동
     path("save", views.save, name="score_save"),          # 데이터를 받아서 디비에 저장
+    path("update", views.update, name="score_update"),
 ]
